@@ -1,0 +1,46 @@
+graph
+├── graph
+├── cycleError
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Node
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── Loop
+│   │   ├── (
+│   │   ├── Node
+│   │   ├── ,
+│   │   ├── Node
+│   │   ├── )
+│   │   ├── directed
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── x
+│   │   ├── :
+│   │   ├── Node
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── c1
+│   │   ├── :
+│   │   ├── Loop
+│   │   ├── (
+│   │   ├── x
+│   │   ├── ->
+│   │   ├── x
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

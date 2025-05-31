@@ -1,0 +1,67 @@
+graph
+├── graph
+├── errorNet
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── A
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 1
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── B
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 1
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── Invalid
+│   │   ├── (
+│   │   ├── B
+│   │   ├── ,
+│   │   ├── A
+│   │   ├── )
+│   │   ├── directed
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── a1
+│   │   ├── :
+│   │   ├── A
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── b1
+│   │   ├── :
+│   │   ├── B
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── e1
+│   │   ├── :
+│   │   ├── Invalid
+│   │   ├── (
+│   │   ├── a1
+│   │   ├── ->
+│   │   ├── b1
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

@@ -1,0 +1,51 @@
+graph
+├── graph
+├── multiGraphA
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Entity
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── RelatedTo
+│   │   ├── (
+│   │   ├── Entity
+│   │   ├── ,
+│   │   ├── Entity
+│   │   ├── )
+│   │   ├── directed
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── a
+│   │   ├── :
+│   │   ├── Entity
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── b
+│   │   ├── :
+│   │   ├── Entity
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── r1
+│   │   ├── :
+│   │   ├── RelatedTo
+│   │   ├── (
+│   │   ├── a
+│   │   ├── ->
+│   │   ├── b
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

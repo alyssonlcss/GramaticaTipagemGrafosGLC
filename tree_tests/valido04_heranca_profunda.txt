@@ -1,0 +1,119 @@
+graph
+├── graph
+├── inheritanceTest
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── A
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── a1
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── int
+│   │   │   │   ├── required
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── B
+│   │   ├── extends
+│   │   ├── A
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── b1
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── C
+│   │   ├── extends
+│   │   ├── B
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── c1
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── bool
+│   │   │   │   ├── =
+│   │   │   │   ├── value
+│   │   │   │   │   └── true
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── Link
+│   │   ├── (
+│   │   ├── A
+│   │   ├── ,
+│   │   ├── A
+│   │   ├── )
+│   │   ├── directed
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── n1
+│   │   ├── :
+│   │   ├── C
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── a1
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 10
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── b1
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "ok"
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── n2
+│   │   ├── :
+│   │   ├── A
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── a1
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 5
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── l1
+│   │   ├── :
+│   │   ├── Link
+│   │   ├── (
+│   │   ├── n1
+│   │   ├── ->
+│   │   ├── n2
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

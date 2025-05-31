@@ -1,0 +1,31 @@
+graph
+├── graph
+├── duplicateVertices
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Node
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── n1
+│   │   ├── :
+│   │   ├── Node
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── n1
+│   │   ├── :
+│   │   ├── Node
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   └── }
+└── }

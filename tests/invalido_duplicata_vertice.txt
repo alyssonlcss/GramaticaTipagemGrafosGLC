@@ -1,0 +1,10 @@
+graph duplicateVertices {
+  types {
+    vertex Node;
+  }
+  vertices {
+    n1 : Node;
+    n1 : Node;  // Duplicado
+  }
+  edges {}
+}

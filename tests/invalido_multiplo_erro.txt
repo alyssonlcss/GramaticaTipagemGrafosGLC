@@ -1,0 +1,19 @@
+graph multiError {
+  types {
+    vertex X attributes {
+      val: int required;
+    };
+    edge E (X, X) directed;
+  }
+
+  vertices {
+    x1 : X;  // falta 'val'
+    x1 : X [ val=5 ];  // duplicado
+    x2 : Y;  // tipo inexistente
+  }
+
+  edges {
+    e1 : E (x1 -> x2);  // x2 inexistente
+    e2 : Z (x1 -> x2);  // tipo de aresta Z inexistente
+  }
+}

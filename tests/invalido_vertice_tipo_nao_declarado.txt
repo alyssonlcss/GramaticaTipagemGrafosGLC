@@ -1,0 +1,9 @@
+graph missingType {
+  types {
+    vertex Person;
+  }
+  vertices {
+    p1 : Human [ name="Zoe" ];  // Human não foi declarado
+  }
+  edges {}
+}

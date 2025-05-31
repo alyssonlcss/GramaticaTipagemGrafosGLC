@@ -1,0 +1,108 @@
+graph
+├── graph
+├── socialGraph
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── User
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 1
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── username
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   ├── required
+│   │   │   │   └── ;
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── active
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── bool
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── Friend
+│   │   ├── (
+│   │   ├── User
+│   │   ├── ,
+│   │   ├── User
+│   │   ├── )
+│   │   ├── undirected
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 0
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── u1
+│   │   ├── :
+│   │   ├── User
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── username
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "alice"
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── active
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── true
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── u2
+│   │   ├── :
+│   │   ├── User
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── username
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "bob"
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── active
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── false
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── f1
+│   │   ├── :
+│   │   ├── Friend
+│   │   ├── (
+│   │   ├── u1
+│   │   ├── ->
+│   │   ├── u2
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

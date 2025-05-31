@@ -1,0 +1,12 @@
+graph attrTest {
+  types {
+    vertex User [1..1] attributes {
+      name: string required;
+      age: int;
+    };
+  }
+  vertices {
+    u1 : User [ age=30 ];  // erro: name ausente
+  }
+  edges {}
+}

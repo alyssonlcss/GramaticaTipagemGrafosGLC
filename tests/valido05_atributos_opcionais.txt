@@ -1,0 +1,19 @@
+graph optionalAttr {
+  types {
+    vertex Item attributes {
+      name: string required;
+      tag: string;
+      quantity: int = 0;
+    };
+    edge Connects (Item, Item) directed;
+  }
+
+  vertices {
+    i1 : Item [ name="Box", quantity=2 ];
+    i2 : Item [ name="Crate" ];
+  }
+
+  edges {
+    c1 : Connects (i1 -> i2);
+  }
+}

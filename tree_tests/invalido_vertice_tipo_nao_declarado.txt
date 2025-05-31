@@ -1,0 +1,34 @@
+graph
+├── graph
+├── missingType
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Person
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── p1
+│   │   ├── :
+│   │   ├── Human
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── name
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "Zoe"
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   └── }
+└── }

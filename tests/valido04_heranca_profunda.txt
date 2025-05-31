@@ -1,0 +1,18 @@
+graph inheritanceTest {
+  types {
+    vertex A attributes { a1: int required; };
+    vertex B extends A attributes { b1: string; };
+    vertex C extends B attributes { c1: bool = true; };
+
+    edge Link (A, A) directed;
+  }
+
+  vertices {
+    n1 : C [ a1=10, b1="ok" ];  // herda de B e A
+    n2 : A [ a1=5 ];
+  }
+
+  edges {
+    l1 : Link (n1 -> n2);
+  }
+}

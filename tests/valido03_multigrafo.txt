@@ -1,0 +1,27 @@
+graph multiGraphA {
+  types {
+    vertex Entity;
+    edge RelatedTo (Entity, Entity) directed;
+  }
+  vertices {
+    a : Entity;
+    b : Entity;
+  }
+  edges {
+    r1 : RelatedTo (a -> b);
+  }
+}
+
+graph multiGraphB {
+  types {
+    vertex Entity;
+    edge LinkedTo (Entity, Entity) directed;
+  }
+  vertices {
+    x : Entity;
+    y : Entity;
+  }
+  edges {
+    l1 : LinkedTo (x -> y);
+  }
+}

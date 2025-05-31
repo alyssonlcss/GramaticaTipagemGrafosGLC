@@ -1,0 +1,99 @@
+graph
+├── graph
+├── optionalAttr
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Item
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── name
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   ├── required
+│   │   │   │   └── ;
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── tag
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   └── ;
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── quantity
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── int
+│   │   │   │   ├── =
+│   │   │   │   ├── value
+│   │   │   │   │   └── 0
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── Connects
+│   │   ├── (
+│   │   ├── Item
+│   │   ├── ,
+│   │   ├── Item
+│   │   ├── )
+│   │   ├── directed
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── i1
+│   │   ├── :
+│   │   ├── Item
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── name
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "Box"
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── quantity
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 2
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── i2
+│   │   ├── :
+│   │   ├── Item
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── name
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "Crate"
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── c1
+│   │   ├── :
+│   │   ├── Connects
+│   │   ├── (
+│   │   ├── i1
+│   │   ├── ->
+│   │   ├── i2
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

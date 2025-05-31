@@ -1,0 +1,14 @@
+graph errorNet {
+  types {
+    vertex A [1..*];
+    vertex B [1..*];
+    edge Invalid (B, A) directed;
+  }
+  vertices {
+    a1 : A;
+    b1 : B;
+  }
+  edges {
+    e1 : Invalid (a1 -> b1);  // erro: ordem incorreta dos tipos
+  }
+}

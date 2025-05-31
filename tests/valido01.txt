@@ -1,0 +1,32 @@
+graph companyNetwork {
+  types {
+    vertex Person [1..*] attributes {
+      name: string required;
+      age: int;
+    };
+
+    vertex Manager extends Person attributes {
+      level: string = "senior";
+    };
+
+    vertex Company [1..*] attributes {
+      name: string required;
+    };
+
+    edge WorksAt (Person, Company) directed [0..*];
+    edge Manages (Manager, Person) directed [0..*];
+  }
+
+  vertices {
+    p1 : Person [ name="Alice", age=30 ];
+    p2 : Person [ name="Bob", age=25 ];
+    m1 : Manager [ name="Carol", age=40, level="executive" ];
+    c1 : Company [ name="OpenAI" ];
+  }
+
+  edges {
+    e1 : WorksAt (p1 -> c1);
+    e2 : WorksAt (p2 -> c1);
+    e3 : Manages (m1 -> p2);
+  }
+}

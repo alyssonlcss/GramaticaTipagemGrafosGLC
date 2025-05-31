@@ -1,0 +1,57 @@
+graph
+├── graph
+├── attrTest
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── User
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 1
+│   │   │   ├── ..
+│   │   │   ├── 1
+│   │   │   └── ]
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── name
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   ├── required
+│   │   │   │   └── ;
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── age
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── int
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── u1
+│   │   ├── :
+│   │   ├── User
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── age
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 30
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   └── }
+└── }

@@ -1,0 +1,19 @@
+graph socialGraph {
+  types {
+    vertex User [1..*] attributes {
+      username: string required;
+      active: bool;
+    };
+
+    edge Friend (User, User) undirected [0..*];
+  }
+
+  vertices {
+    u1 : User [ username="alice", active=true ];
+    u2 : User [ username="bob", active=false ];
+  }
+
+  edges {
+    f1 : Friend (u1 -> u2);
+  }
+}

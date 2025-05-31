@@ -1,0 +1,85 @@
+graph
+├── graph
+├── multiError
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── X
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── val
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── int
+│   │   │   │   ├── required
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── E
+│   │   ├── (
+│   │   ├── X
+│   │   ├── ,
+│   │   ├── X
+│   │   ├── )
+│   │   ├── directed
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── x1
+│   │   ├── :
+│   │   ├── X
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── x1
+│   │   ├── :
+│   │   ├── X
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── val
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 5
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── x2
+│   │   ├── :
+│   │   ├── Y
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── e1
+│   │   ├── :
+│   │   ├── E
+│   │   ├── (
+│   │   ├── x1
+│   │   ├── ->
+│   │   ├── x2
+│   │   ├── )
+│   │   └── ;
+│   ├── edge_instance
+│   │   ├── e2
+│   │   ├── :
+│   │   ├── Z
+│   │   ├── (
+│   │   ├── x1
+│   │   ├── ->
+│   │   ├── x2
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

@@ -1,0 +1,222 @@
+graph
+├── graph
+├── companyNetwork
+├── {
+├── type_section
+│   ├── types
+│   ├── {
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Person
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 1
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── name
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   ├── required
+│   │   │   │   └── ;
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── age
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── int
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Manager
+│   │   ├── extends
+│   │   ├── Person
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── level
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   ├── =
+│   │   │   │   ├── value
+│   │   │   │   │   └── "senior"
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── vertex_type_decl
+│   │   ├── vertex
+│   │   ├── Company
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 1
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   ├── attribute_block
+│   │   │   ├── attributes
+│   │   │   ├── {
+│   │   │   ├── attribute_decl
+│   │   │   │   ├── name
+│   │   │   │   ├── :
+│   │   │   │   ├── type
+│   │   │   │   │   └── string
+│   │   │   │   ├── required
+│   │   │   │   └── ;
+│   │   │   └── }
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── WorksAt
+│   │   ├── (
+│   │   ├── Person
+│   │   ├── ,
+│   │   ├── Company
+│   │   ├── )
+│   │   ├── directed
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 0
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   └── ;
+│   ├── edge_type_decl
+│   │   ├── edge
+│   │   ├── Manages
+│   │   ├── (
+│   │   ├── Manager
+│   │   ├── ,
+│   │   ├── Person
+│   │   ├── )
+│   │   ├── directed
+│   │   ├── cardinality
+│   │   │   ├── [
+│   │   │   ├── 0
+│   │   │   ├── ..
+│   │   │   ├── *
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── vertex_section
+│   ├── vertices
+│   ├── {
+│   ├── vertex_instance
+│   │   ├── p1
+│   │   ├── :
+│   │   ├── Person
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── name
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "Alice"
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── age
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 30
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── p2
+│   │   ├── :
+│   │   ├── Person
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── name
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "Bob"
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── age
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 25
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── m1
+│   │   ├── :
+│   │   ├── Manager
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── name
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "Carol"
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── age
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── 40
+│   │   │   ├── ,
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── level
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "executive"
+│   │   │   └── ]
+│   │   └── ;
+│   ├── vertex_instance
+│   │   ├── c1
+│   │   ├── :
+│   │   ├── Company
+│   │   ├── attribute_assign_block
+│   │   │   ├── [
+│   │   │   ├── attribute_assignment
+│   │   │   │   ├── name
+│   │   │   │   ├── =
+│   │   │   │   └── value
+│   │   │   │       └── "OpenAI"
+│   │   │   └── ]
+│   │   └── ;
+│   └── }
+├── edge_section
+│   ├── edges
+│   ├── {
+│   ├── edge_instance
+│   │   ├── e1
+│   │   ├── :
+│   │   ├── WorksAt
+│   │   ├── (
+│   │   ├── p1
+│   │   ├── ->
+│   │   ├── c1
+│   │   ├── )
+│   │   └── ;
+│   ├── edge_instance
+│   │   ├── e2
+│   │   ├── :
+│   │   ├── WorksAt
+│   │   ├── (
+│   │   ├── p2
+│   │   ├── ->
+│   │   ├── c1
+│   │   ├── )
+│   │   └── ;
+│   ├── edge_instance
+│   │   ├── e3
+│   │   ├── :
+│   │   ├── Manages
+│   │   ├── (
+│   │   ├── m1
+│   │   ├── ->
+│   │   ├── p2
+│   │   ├── )
+│   │   └── ;
+│   └── }
+└── }

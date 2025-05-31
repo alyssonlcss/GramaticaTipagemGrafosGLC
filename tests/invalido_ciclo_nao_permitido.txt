@@ -1,0 +1,14 @@
+graph cycleError {
+  types {
+    vertex Node;
+    edge Loop (Node, Node) directed;
+  }
+
+  vertices {
+    x : Node;
+  }
+
+  edges {
+    c1 : Loop (x -> x);  // ciclo
+  }
+}
