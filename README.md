@@ -73,7 +73,7 @@ O script irá:
 
 ---
 
-## Exemplo de Saída
+## Resultados dos Testes (/tests)
 
 ```
 🧪 Testando: tests\invalido_atributo_ausente.txt
